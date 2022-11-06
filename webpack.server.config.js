@@ -1,6 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const buildDirectory = 'dist';
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 module.exports = {
   mode: 'development',
   entry: [
@@ -36,5 +40,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({ 'process.env': JSON.stringify(process.env)}) 
+
   ],
 };

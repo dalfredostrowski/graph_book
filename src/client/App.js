@@ -10,6 +10,11 @@ import '../../assets/css/style.css';
 import Router from './router';
 
 
+const { JWT_SECRET } = process.env;
+//console.log(`Testing for:  ${JWT_SECRET}`)
+
+
+
 
 //const App = () => {
 

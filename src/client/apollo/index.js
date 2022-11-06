@@ -15,7 +15,7 @@ const port = location.port ? ':'+location.port: '';
 
 
 const httpLink = createUploadLink({
-	uri: 'http://ec2-18-237-116-243.us-west-2.compute.amazonaws.com:8000/graphql',
+	uri: 'http://ec2-54-212-60-51.us-west-2.compute.amazonaws.com:8000/graphql',
   credentials: 'same-origin',
 });
 
@@ -24,7 +24,7 @@ const httpLink = createUploadLink({
 
 //const SUBSCRIPTIONS_ENDPOINT = protocol + location.hostname + port + '/subscriptions';
 
-const SUBSCRIPTIONS_ENDPOINT = 'ws://ec2-18-237-116-243.us-west-2.compute.amazonaws.com:8000'  + '/subscriptions';
+const SUBSCRIPTIONS_ENDPOINT = 'ws://ec2-54-212-60-51.us-west-2.compute.amazonaws.com:8000'  + '/subscriptions';
 
 
 const subClient = new SubscriptionClient(SUBSCRIPTIONS_ENDPOINT, {
